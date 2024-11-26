@@ -7,14 +7,8 @@ app = Flask(__name__)
 
 # Load the trained model from the 'model' directory
 
-
-model_path = os.path.join(os.path.dirname(__file__), 'Model', 'random_forest_model.pkl')
-try:
-    model = joblib.load(model_path)
-    print("Model loaded successfully.")
-except Exception as e:
-    print(f"Error loading model: {e}")
-
+model_path = os.path.join('model', 'random_forest_model.pkl')
+model = joblib.load(model_path)
 
 @app.route('/')
 def home():
@@ -36,7 +30,7 @@ def predict():
         features = np.array([[so2, no2, rspm, spm]])
 
         # Make prediction
-        prediction = Model.predict(features)
+        prediction = model.predict(features)
 
         # Calculate AQI value (Assuming it is a simple average for this example)
         # You can change this calculation as per your AQI formula
