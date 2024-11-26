@@ -1,8 +1,7 @@
-setuptools
-wheel
 Flask==2.2.2
-numpy==1.23.4
+gunicorn==20.1.0
 joblib==1.1.0
+numpy==1.23.4
 scikit-learn==1.1.2
-vercel-python==0.3.0
+
 
