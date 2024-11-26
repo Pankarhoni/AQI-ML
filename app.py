@@ -39,3 +39,10 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+try:
+    from flask import Flask, request, render_template
+    print("Flask module imported successfully")
+except Exception as e:
+    print(f"Error importing Flask: {e}")
+
