@@ -36,7 +36,7 @@ def predict():
         features = np.array([[so2, no2, rspm, spm]])
 
         # Make prediction
-        prediction = model.predict(features)
+        prediction = Model.predict(features)
 
         # Calculate AQI value (Assuming it is a simple average for this example)
         # You can change this calculation as per your AQI formula
