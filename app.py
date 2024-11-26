@@ -6,8 +6,15 @@ import os
 app = Flask(__name__)
 
 # Load the trained model from the 'model' directory
-model_path = os.path.join('model', 'random_forest_model.pkl')
-model = joblib.load(model_path)
+
+
+model_path = os.path.join(os.path.dirname(__file__), 'Model', 'random_forest_model.pkl')
+try:
+    model = joblib.load(model_path)
+    print("Model loaded successfully.")
+except Exception as e:
+    print(f"Error loading model: {e}")
+
 
 @app.route('/')
 def home():
