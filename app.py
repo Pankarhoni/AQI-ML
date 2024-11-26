@@ -52,4 +52,9 @@ try:
     print("Flask module imported successfully")
 except Exception as e:
     print(f"Error importing Flask: {e}")
+    
+@app.route('/favicon.ico')
+def favicon():
+    return '', 204
+
 
