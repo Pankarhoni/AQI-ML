@@ -10,3 +10,5 @@ The platform allows users to enter air pollutant levels, and the trained model w
 <ins>You can check out the project:</ins>
 
 Deployed on Render: [AQI-ML](https://aqi-ml.onrender.com)
+
+_Note: might take a few seconds to load due to server response time._
